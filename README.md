@@ -13,6 +13,23 @@ urlFragment: 'https://github.com/MicrosoftDocs/mslearn-staticwebapp'
 
 Follow the hands-on tutorial to [publish an Angular, React, Svelte, or Vue JavaScript app and API with Azure Static Web Apps](https://docs.microsoft.com/learn/modules/publish-app-service-static-web-app-api/?WT.mc_id=mslearn_staticwebapp-github-jopapa).
 
+Atenção:
+Originalmente este projeto foi criado pela Microsoft com Node 12.14.1
+
+Ao executar o comando npm install é instalada versão v18.12.1 atual
+Ao executar o comando npm start ocorre erro 
+Error: error:0308010C:digital envelope routines::unsupported
+opensslErrorStack: [ 'error:03000086:digital envelope routines::initialization error' ],
+  library: 'digital envelope routines',
+  reason: 'unsupported',
+  code: 'ERR_OSSL_EVP_UNSUPPORTED'
+}
+
+Para resolver, execute o comando:
+set NODE_OPTIONS=--openssl-legacy-provider
+
+Para saber mais leia https://stackoverflow.com/questions/69692842/error-message-error0308010cdigital-envelope-routinesunsupported
+
 ## Static Web App
 
 This repository contains apps that can be used with as a starting point for some MS Learn Modules. Because everyone has their own preference for their JavaScript frameworks/library, you can choose which one you prefer.
